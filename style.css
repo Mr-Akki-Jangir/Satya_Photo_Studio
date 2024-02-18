@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body
+{
+    background-image: url('/assets/imgs/bg/nnnoise.svg');
+    background-position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.uk-navbar-right .uk-navbar-nav li a
+{
+    font-family: "Inter", sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    color: #f1f1f1;
+}
+
+.uk-navbar-nav li.uk-active a
+{
+    font-weight: 600;
+    color: #589AD8;
+}
