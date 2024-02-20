@@ -309,6 +309,7 @@ counter-reset: count;
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container .radio_card
   {
+    position: relative;
     width: 80px;
     border-radius: .75rem;
     background-size: cover;
@@ -389,7 +390,6 @@ counter-reset: count;
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container input:checked + label
   {
     width: 820px;
-    position: relative;
   }
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container input:checked + label .radio_card_description
@@ -398,4 +398,41 @@ counter-reset: count;
     transform: translateY(0) !important;
   }
 
+
+
+@media (max-width: 1366px) {
+
+  .hero_section .uk-container
+  {
+    height: 100vh;
+  }
+
+  .hero_section .uk-container .hero_right_side {
+    width: 722px;
+    height: 100%;
+  }
+
+  .carousels_section .uk-container .carousels_title {
+  padding: 30px 0 110px 0;
+}
+
+.carousels_section .carousels_container::before{
+  top: -490%;
+}
+
+.carousels_section .carousels_container::after{
+  bottom: -490%;
+}
+
+.carousels_section .carousels_container
+{
+  margin-top: -150px;
+}
+
+.services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container input:checked + label
+{
+  width: 600px;
+}
+
   
+}
