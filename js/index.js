@@ -8,3 +8,37 @@ gsap.to('.char', {
     duration: .1
 
 })
+
+gsap.registerPlugin(ScrollTrigger)
+
+const splitTypes = document.querySelectorAll('.tr')
+
+splitTypes.forEach((char, i) => {
+    const txt = new SplitType(char, { types: 'chars'})
+
+    gsap.from(txt.chars, {
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 80%',
+            end: 'top 20%',
+            scrub: true,
+            markers: false
+        },
+        opacity: 0.2,
+        stragger: 0.1
+    })
+})
+
+
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)

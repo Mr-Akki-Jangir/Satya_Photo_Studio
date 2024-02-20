@@ -117,6 +117,25 @@ nav .uk-container {
   white-space: wrap;
 }
 
+/* .carousels_section .uk-container .carousels_title h2 > div
+{
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 50%,
+    rgb(37, 37, 37) 50%
+  );
+    background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+    margin-bottom: -250px;//
+  margin-left: 50px;
+  line-height: 1.2;
+    outline: 6px dotted teal;//
+  font-size: 64px;
+} */
+
 .carousels_section .carousels_container {
     position: relative;
   height: 100vh;
@@ -249,7 +268,8 @@ counter-reset: count;
     font-size: 3vw;
   } */
 
-  .services_section .two_ele_section
+  .services_section .two_ele_section,
+  .two_ele_section_type2
   {
     display: flex;
     align-items: start;
@@ -262,8 +282,8 @@ counter-reset: count;
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0.07886904761904767) 0%, rgba(0,0,0,1) 100%);
+    background: rgb(46,46,46);
+background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100%);
   }
 
   .services_section .two_ele_right_side .radio_slider_wraper {
@@ -273,12 +293,12 @@ counter-reset: count;
     justify-content: end;
   }
 
-  .services_section .two_ele_left_side
+  .services_section .two_ele_left_side, .two_ele_type2_right_side
   {
     width: 228px;
   }
 
-  .services_section .two_ele_left_side .to_ele_title h2
+  .sec_title h2
   {
     margin: 0;
     font-family: "Inter", sans-serif;
@@ -289,7 +309,13 @@ counter-reset: count;
     
   }
 
-  .services_section .two_ele_left_side .two_ele_description p
+  .two_ele_type2_right_side .sec_title h2, 
+  .two_ele_section_type2 .two_ele_type2_right_side .two_ele_description p
+  {
+    text-align: end;
+  }
+
+  .services_section .two_ele_left_side .two_ele_description p, .two_ele_type2_right_side .two_ele_description p
   {
     margin: 0;
     font-family: "Inter", sans-serif;
@@ -315,34 +341,46 @@ counter-reset: count;
     background-size: cover;
     cursor: pointer;
     overflow: hidden;
-    border: 1px solid #589ad8;
-    border-radius: 20px;
-    margin: 0 10px;
+    border-radius: 12px;
+    margin: 0 -10px;
     display: flex;
     align-items: flex-end;
     transition: .6s cubic-bezier(.28,-0.03,0,.99);
-    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    box-shadow: 41px 0px 11px 0px rgba(0,0,0,0.06),
+26px 0px 10px 0px rgba(0,0,0,0.06),
+15px 0px 9px 0px rgba(0,0,0,0.2),
+7px 0px 7px 0px rgba(0,0,0,0.34),
+2px 0px 4px 0px rgba(0,0,0,0.39);
   }
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container .radio_card[for='rc1']
   {
     background-image: url('./assets/imgs/srvs_card_photoshot.png');
+    z-index: 4;
   }
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container .radio_card[for='rc2']
   {
     background-image: url('./assets/imgs/srvs_card_drone.png');
+    z-index: 3;
   }
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container .radio_card[for='rc3']
   {
     background-image: url('./assets/imgs/srvs_card_carne.png');
+    z-index: 2;
   }
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container .radio_card[for='rc4']
   {
     background-image: url('./assets/imgs/srvs_card_events.png');
+    z-index: 1;
   }
+
+
+
+
+
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container .radio_card > .row
   {
@@ -389,13 +427,293 @@ counter-reset: count;
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container input:checked + label
   {
-    width: 820px;
+    width: 860px;
   }
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container input:checked + label .radio_card_description
   {
     opacity: 1 !important;
     transform: translateY(0) !important;
+  }
+
+
+  .price_card_container
+  {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+
+  }
+
+
+  .price_card_inner
+  {
+    position: relative;
+    width: 240px;
+    height: 370px;
+    border: 2px solid #589ad8;
+    border-radius: 16px;
+    background: transparent;
+    padding: 20px;
+    z-index: 1;
+  }
+
+
+
+  .price_card .price_card_outer_brder_top,
+  .price_card .price_card_outer_brder_btm
+  {
+    width: 100%;
+    z-index: 0;
+  }
+
+  .price_card .price_card_outer_brder_top img,
+  .price_card .price_card_outer_brder_btm img
+  {
+    position: absolute;
+    width: 80px;
+    transition: ease-in 0.4s all;
+
+  }
+
+  .price_card .price_card_outer_brder_top img
+  {
+    left: -12px;
+    top: -12px;
+  }
+
+  .price_card .price_card_outer_brder_btm img
+  {
+    right: -12px;
+    bottom: -12px;
+  }
+
+  .price_card_inner .price_card_title
+  {
+    padding: 8px 0 18px 0;
+  }
+
+  /* .price_card_inner:hover + .price_card_inner .price_card_outer_brder_top img
+  {
+    left: 0px;
+    top: 0px;
+  } */
+
+  .price_card_inner .price_card_title h3
+  {
+    font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  text-align: start;
+  }
+
+  .price_card_inner .price_card_description
+  {
+    width: 200px;
+    padding: 0 0 34px 0;
+  }
+
+  .price_card_inner .price_card_description p,  .price_card_inner .price_card_ruppes h3
+  {
+    font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  text-align: start;
+  }
+
+  .price_card_inner .price_card_range
+  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 2px 0;
+  }
+
+  .price_card_inner .price_card_range hr
+  {
+
+    border: 2px solid #589ad8;
+    width: 200px;
+  }
+
+  .price_card_inner .price_card_ruppes
+  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price_card_inner .price_card_ruppes h3
+  {
+    font-size: 12px;
+  }
+
+  .price_card_inner .btn_buy
+  {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0 0 0;
+  }
+
+ 
+
+  .price_card_inner .btn_buy button
+  {
+
+    width: 180px;
+    height: 45px;
+    text-transform: none;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #589ad8;
+  border-radius: 40px;
+  }
+
+  .tools_and_equipment_section
+  {
+    padding: 50px 0 50px 50px;
+  }
+
+  .tools_and_equipment_section .sec_title
+  {
+    padding: 0 0 40px 0;
+  }
+
+  .gear_container
+  {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .gear_container img
+  {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .gear_container img:first-child
+  {
+    height: 84vh;
+    top: -5%;
+    left: 0;
+  }
+
+  .gear_container img:nth-child(2)
+  {
+    height: 20vw;
+    top: 0;
+    left: 8%;
+  }
+
+  .gear_container img:nth-child(3)
+  {
+    width: 40vw;
+    top: 0;
+    left: 16%;
+  }
+
+  .gear_container img:nth-child(4)
+  {
+    width: 26vw;
+    top: 0;
+    left: 45%;
+  }
+
+  .gear_container img:nth-child(5)
+  {
+    height: 100vh;
+    top: 0;
+    right: 0;
+  }
+
+  .gear_container img:nth-child(6)
+  {
+    width: 20vw;
+    top: 36%;
+    left: 8%;
+  }
+
+  .gear_container img:nth-child(7)
+  {
+    width: 40vw;
+    top: 25%;
+    left: 15%;
+  }
+
+  .gear_container img:nth-child(8)
+  {
+    width: 12vw;
+    top: 38%;
+    left: 45%;
+  }
+
+  .gear_container img:nth-child(9)
+  {
+    width: 12vw;
+    top: 38%;
+    left: 55%;
+  }
+
+  .gear_container img:nth-child(10)
+  {
+    height: 18vw;
+    bottom: 0;
+    left: 0;
+  }
+
+  .gear_container img:nth-child(11)
+  {
+    width: 26vw;
+    bottom: -8%;
+    left: 24%;
+  }
+
+  .gear_container img:nth-child(12)
+  {
+    width: 26vw;
+    bottom: -8%;
+    left: 45%;
+  }
+
+  .map_section .sec_title h3
+  {
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  padding: 12px 0 0 0;
+  }
+
+  .map_section
+  {
+    padding: 50px 40px 0 50px;
+  }
+
+  .map_section .map_container iframe
+  {
+    width: 100%;
+    height: 80vh;
+  }
+
+  .map_container
+  {
+    padding: 20px 0 0 0;
+  }
+
+  .map_container iframe
+  {
+    border-radius: 16px;
   }
 
 
@@ -431,7 +749,7 @@ counter-reset: count;
 
 .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container input:checked + label
 {
-  width: 600px;
+  width: 720px;
 }
 
   
