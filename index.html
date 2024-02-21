@@ -42,7 +42,7 @@
 
     <section class="hero_section">
         <div class="uk-container">
-            <div class="hero_left_side">
+            <div class="hero_left_side" id="zomm-out">
                 <div class="hero_title">
                     <h2 id="hero_title_top">Satya Photo</h2>
                     <h2 id="hero_title_btm">Studio</h2>
@@ -59,7 +59,7 @@
             </div>
     
             <div class="hero_right_side">
-                <div class="camera_img">
+                <div class="camera_img" id="zomm-out">
                     <img src="./assets/imgs/sony_hero_section.png" alt="">
                 </div>
             </div>
@@ -70,8 +70,8 @@
 
     <section class="carousels_section">
         <div class="uk-container">
-            <div class="carousels_title">
-                <h2 class="tr">We Treasuring Your Precious<br>
+            <div class="carousels_title" id="zoom-in">
+                <h2 class="txt_revel" data-bg-color="#535353" data-fg-color="#ffffff">We Treasuring Your Precious<br>
                     Moments and Make Them<br>
                     Timeless Memories</h2>
             </div>
@@ -114,10 +114,10 @@
         <div class="uk_container-expand two_ele_section">
             <div class="two_ele_left_side">
                 <div class="sec_title">
-                    <h2>Our<br>Services</h2>
+                    <h2 class="txt_revel" data-bg-color="#535353" data-fg-color="#fff">Our<br>Services</h2>
                 </div>
-                <div class="two_ele_description">
-                    <p>We provide Varity
+                <div class="sec_description">
+                    <p class="txt_revel" data-bg-color="#535353" data-fg-color="#fff">We provide Varity
                         of services, which
                         includes weeding
                         photoshot, drone
@@ -127,7 +127,7 @@
                 </div>
             </div>
 
-            <div class="two_ele_right_side">
+            <div class="two_ele_right_side lr1200">
                 <div class="radio_slider_wraper">
                     <div class="radio_slider_container">
                         <input type="radio" name="slide" id="rc1" checked>
@@ -187,7 +187,7 @@
     <section class="prices_section">
         <div class="uk_container-expand two_ele_section_type2">
 
-            <div class="two_ele_sec_type2_left">
+            <div class="two_ele_sec_type2_left lr1200">
                 <div class="price_card_container">
                     <div class="price_card">
                         
@@ -313,7 +313,7 @@
                 <div class="sec_title">
                     <h2>Our<br>Prices</h2>
                 </div>
-                <div class="two_ele_description">
+                <div class="sec_description">
                     <p>We provide Varity
                         of services, which
                         includes weeding
@@ -346,6 +346,8 @@
             <img src="./assets/imgs/gear/g11.png" alt="">
             <img src="./assets/imgs/gear/g12.png" alt="">
         </div>
+
+
     </section>
 
     <section class="map_section">
@@ -360,29 +362,126 @@
 
     </section>
 
+
+    <section class="contact_us_section">
+        <div class="sec_title">
+            <h2>Contact Us</h2>
+        </div>
+
+        <div class="contact_us_form_container">
+            <div class="contact_camera_bg">
+                <img src="./assets/imgs/pexels-e-5050663.png" alt="">
+            </div>
+            <div class="contact_from">
+                <ul uk-tab data-uk-tab="{connect:'#contact_contents'}">
+                    <li class="uk-active"><a href="#" id="contact_msg_form">Send Message</a></li>
+                    <li><a href="#" id="contact_info_form">Contact Info</a></li>
+                </ul>
+
+                <div class="tabs_content_container">
+
+                    <div class="contact_form_first">
+                        <div class="form_input">
+                            <label for="">Your Email</label>
+                            <input class="uk-input" type="text" placeholder="Input" aria-label="Input">
+                        </div>
+
+                        <div class="form_input">
+                            <label for="">Your Message</label>
+                            <textarea class="uk-textarea" rows="5" placeholder="Textarea" aria-label="Textarea"></textarea>
+                        </div>
+
+                        <div class="send_btn">
+                            <button class="uk-button uk-button-primary">Send</button>
+                        </div>
+                    </div>
+
+                    <div class="contact_form_two">
+                        <li><img src="./assets/icons/phone.svg" alt=""><a href="">+91-</a></li>
+                        <li><img src="./assets/icons/whatsapp.svg" alt=""><a href="">+91-</a></li>
+                        <li><img src="./assets/icons/instagram.svg" alt=""><a href="">+91-</a></li>
+                    </div>
+ 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="why_us_section">
+
+        <div class="why_us_left_side">
+            <div class="sec_title">
+                <h2>Why<br>Us</h2>
+            </div>
+            <div class="sec_description">
+                <p>Here are some
+                    keypoints to
+                    indicate why you
+                    should choose us</p>
+            </div>
+        </div>
+
+        <div class="why_us_right_side">
+            <div class="why_us_right_top">
+                <div class="why_us_top_cards_container">
+                    <div class="why_us_top_card">
+                        <div class="wust_icon">
+                            <img src="./assets/icons/wedding.svg" alt="">
+                        </div>
+                        <div class="wust_content">
+                            <h2>20+</h2>
+                            <h3>Wedding<br>Shoots</h3>
+                        </div>
+                    </div>
+    
+                    <div class="why_us_top_card">
+                        <div class="wust_icon">
+                            <img src="./assets/icons/happy_customer.svg" alt="">
+                        </div>
+                        <div class="wust_content">
+                            <h2>500+</h2>
+                            <h3>Happy<br>Customers</h3>
+                        </div>
+                    </div>
+
+                    <div class="why_us_top_card">
+                        <div class="wust_icon">
+                            <img src="./assets/icons/event_checklist.svg" alt="">
+                        </div>
+                        <div class="wust_content">
+                            <h2>30+</h2>
+                            <h3>Events and<br>Functions</h3>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
     
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://unpkg.com/split-type"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.18.3/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.18.3/dist/js/uikit-icons.min.js"></script>
 
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
 
 
 <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EasePack.min.js"></script>
 
-<script src="
-https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/dist/lenis.min.js
-"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script src="https://unpkg.com/split-type"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
 
     <script type="text/babel" src="./js/curved_carousel.js"></script>
     <script src="./js/index.js"></script>
