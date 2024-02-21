@@ -27,7 +27,9 @@ nav .uk-container {
   color: #589ad8;
 }
 
+
 .hero_section .uk-container {
+  width: 100vw;
   max-width: 100vw;
   margin: 0;
   padding: 0;
@@ -36,6 +38,9 @@ nav .uk-container {
   align-items: center;
   justify-content: space-between;
 }
+
+
+
 
 .hero_section .uk-container .hero_left_side {
   padding: 0 0 70vh 100px;
@@ -774,13 +779,8 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
     margin: -60px 0 0 0;
   }
 
-  .contact_us_form_container .contact_from
-  {
-    position: absolute;
-    top: 20%;
-    left: 262px;
 
-  }
+  
 
 
   .contact_us_section .uk-tab>*
@@ -862,6 +862,143 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
     margin: 40px 0 0 0;
   }
 
+  .why_us_section
+  {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    padding: 20px 50px 0 50px;
+  }
+
+  .why_us_section .why_us_left_side
+  {
+    width: 15vw;
+  }
+
+  .why_us_section .why_us_right_side
+  {
+    width: 66vw;
+  }
+
+  .why_us_top_cards_container,
+  .why_us_bottom_cards_container
+  {
+    width: 66vw;
+  }
+
+
+  .why_us_bottom_cards_container
+  {
+    padding: 6vw 0 0 0;
+  }
+
+  .why_us_bottom_cards_container .wubtm_row:last-child
+  {
+    padding: 2vw 0 0 0;
+  }
+  .why_us_top_cards_container
+  {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .why_us_top_cards_container .why_us_top_card
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .why_us_top_card .wust_icon img
+  {
+    width: 7.5vw;
+    height: 7.5vw;
+  }
+
+  .why_us_top_card .wust_content
+  {
+    margin: -16px 0 0 15px;
+  }
+
+  .why_us_top_card .wust_content h2,
+  .why_us_top_card .wust_content h3
+  {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    
+  }
+  
+  .why_us_top_card .wust_content h2
+  {
+    font-size: 3.1vw;
+    color: #589ad8;
+    font-weight: 700;
+  }
+  
+  .why_us_top_card .wust_content h3
+  {
+    font-size: 1.8vw;
+    font-weight: 500;
+    color: #fff;
+    line-height: 2rem;
+  }
+
+  .wubtm_row
+  {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 50px; */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wubtm_card
+  {
+    width: 32vw;
+  }
+
+
+  .wubtm_card_top
+  {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .wubtm_card_title
+  {
+    padding: 0 0 0 12px;
+  }
+
+  .wubtm_card_title h2, .wubtm_card_btm p
+  {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    
+  }
+
+  .wubtm_card_title h2
+  {
+    font-size: 1.7vw;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .wubtm_card_btm
+  {
+    padding: 5px 0 0 0;
+  }
+
+  .wubtm_card_btm p
+  {
+    font-size: 1.17vw;
+    font-weight: 400;
+  }
+
 
 
 
@@ -873,9 +1010,13 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
     height: 100vh;
   }
 
+  .hero_section .uk-container .hero_left_side {
+    padding: 0 0 60vh 100px;
+  }
+  
+
   .hero_section .uk-container .hero_right_side {
-    width: 722px;
-    height: 100%;
+    width: 58vw;
   }
 
   .carousels_section .uk-container .carousels_title {
@@ -899,6 +1040,36 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
 {
   width: 720px;
 }
+
+.two_ele_left_side
+  {
+    
+    transform: translateX(-280px);
+  }
+
+  .two_ele_right_side
+  {
+    
+    transform: translateX(980px);
+  }
+
+  .two_ele_type2_right_side
+  {
+    transform: translateX(280px);
+  }
+
+  .two_ele_sec_type2_left
+  {
+    transform: translateX(-980px);
+  }
+
+  .contact_us_form_container .contact_from
+  {
+    position: absolute;
+    top: 20%;
+    left: 182px;
+
+  }
 
   
 }

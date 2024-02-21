@@ -18,8 +18,8 @@ gsap.to('#zomm-out' ,{
     scrollTrigger: {
         trigger: '#zomm-out',
         pin: true,
-        end: `+=${innerHeight * 1}`,
-        scrub: 3
+        end: `+=${innerHeight * 1.1}`,
+        scrub: 2
     }
 
 })
