@@ -11,18 +11,31 @@ gsap.to('.char', {
 
 })
 
-gsap.to('#zomm-out' ,{
-    scale: 0.6,
-    stagger: 0.25,
-    duration: 2,
+let hero_timeline = gsap.timeline({
+    yoyo:true,
     scrollTrigger: {
-        trigger: '#zomm-out',
+        trigger: '.hero_section',
+        scrub: true,
         pin: true,
-        end: `+=${innerHeight * 1.1}`,
-        scrub: 2
+        start: 'top top',
+        end: "+=100%"
     }
+});
 
-})
+hero_timeline.to('.hero_left_side', .5, {scale: 0.6, x: 300, autoAlpha: 0, ease: 'power2'}, 0)
+             .to('.hero_right_side', 0.5, {scale: 0.6, x: -300, autoAlpha: 0, ease: 'power2'}, 0)
+// gsap.to('#zomm-out' ,{
+//     scale: 0.6,
+//     stagger: 0.25,
+//     duration: 2,
+//     scrollTrigger: {
+//         trigger: '#zomm-out',
+//         pin: true,
+//         end: `+=${innerHeight * 1.1}`,
+//         scrub: 2
+//     }
+
+// })
 
 
 
