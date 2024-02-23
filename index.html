@@ -16,11 +16,12 @@
 <body>
 
     
+    
 
     
 
 
-    <div class="nav_bar_container">
+    <div class="nav_bar_container" id="desk_nav">
         <nav class="uk-navbar-container uk-navbar-transparent">
             <div class="uk-container">
                 <div uk-navbar>
@@ -32,15 +33,50 @@
                             <li><a href="">Gears</a></li>
                             <li><a href="">Contact</a></li>
                             <li><a href="">Why Us</a></li>
+                            <li><a href="">
+                                <svg viewBox="0 0 100 100">
+                                    <path
+                                      class="line line1"
+                                      d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                                    />
+                                    <path class="line line2" d="M 20,50 H 80" />
+                                    <path
+                                      class="line line3"
+                                      d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                                    />
+                                  </svg>
+                                
+                            </a></li>
                         </ul>
                     </div>
+
+                    
                 </div>
             </div>
         </nav>
 
+        
     </div>
 
+    <div class="mobile_nav_wraper">
+        <div class="menu-container">
+            <nav>
+              <a href="#" class="menu-item">Work</a>
+              <a href="#" class="menu-item">Profile</a>
+              <a href="#" class="menu-item">Contact</a>
+              <a href="#" class="menu-item">Design</a>
+              <a href="#" class="menu-item">Login</a>
+            </nav>
+          </div>
+
+          <button id="menu-btn"><i class="nav_icon" data-lucide="menu"></i></button>
+          
+    </div>
+
+    
+
     <section class="hero_section">
+        
         <div class="uk-container">
             <div class="hero_left_side" id="zomm-out">
                 <div class="hero_title">
@@ -118,7 +154,7 @@
         <div class="uk_container-expand two_ele_section">
             <div class="two_ele_left_side">
                 <div class="sec_title">
-                    <h2 class="txt_revel" data-bg-color="#535353" data-fg-color="#fff">Our<br>Services</h2>
+                    <h2 class="txt_revel" data-bg-color="#535353" data-fg-color="#fff">Our<br class="title_break">Services</h2>
                 </div>
                 <div class="sec_description">
                     <p class="txt_revel" data-bg-color="#535353" data-fg-color="#fff">We provide Varity
@@ -315,7 +351,7 @@
 
             <div class="two_ele_type2_right_side">
                 <div class="sec_title">
-                    <h2>Our<br>Prices</h2>
+                    <h2>Our<br class="title_break">Prices</h2>
                 </div>
                 <div class="sec_description">
                     <p>We provide Varity
@@ -416,7 +452,7 @@
 
         <div class="why_us_left_side">
             <div class="sec_title">
-                <h2>Why<br>Us</h2>
+                <h2>Why<br class="title_break">Us</h2>
             </div>
             <div class="sec_description">
                 <p>Here are some
@@ -829,7 +865,7 @@
 
         <div class="feedback_right_side">
             <div class="sec_title">
-                <h2>Reviews &<br>
+                <h2>Reviews &<br class="title_break">
                     Feed-backs</h2>
             </div>
             <div class="sec_description">
@@ -945,7 +981,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     
-
+  
 
 <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EasePack.min.js"></script>
