@@ -6,10 +6,65 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow: hidden;
  
 }
 
+.loader_wraper
+{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-image: url("./assets/imgs/bg/bg5x2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 99;
+}
+
+.loader {
+  width: 44.8px;
+  height: 44.8px;
+  color: #589ad8;
+  position: relative;
+  background: radial-gradient(11.2px,currentColor 94%,#0000);
+}
+
+.loader:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(10.08px at bottom right,#0000 94%,currentColor) top    left,
+          radial-gradient(10.08px at bottom left ,#0000 94%,currentColor) top    right,
+          radial-gradient(10.08px at top    right,#0000 94%,currentColor) bottom left,
+          radial-gradient(10.08px at top    left ,#0000 94%,currentColor) bottom right;
+  background-size: 22.4px 22.4px;
+  background-repeat: no-repeat;
+  animation: loader 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+
+@keyframes loader {
+  33% {
+    inset: -11.2px;
+    transform: rotate(0deg);
+  }
+
+  66% {
+    inset: -11.2px;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}
 
 
 nav .uk-container {
@@ -77,6 +132,57 @@ nav .uk-container {
   text-decoration: underline;
 }
 
+.nav_btn
+{
+  position: absolute;
+  width: 35px;
+  background: transparent;
+  top: 2%;
+  right: 5%;
+  z-index: 9;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+
+.line {
+  fill: none;
+  stroke: #589ad8;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
 /* .container-nav .menu {
   background-color: transparent;
   border: none;
@@ -141,7 +247,7 @@ footer
   font-family: "Inter", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: clamp(60px, 6.25vw + 1px, 74px);
+  font-size: clamp(60px, 4.8vw, 74px);
   font-weight: 600;
   margin: 0;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -184,11 +290,11 @@ footer
   width: 70vw;
 }
 
-.carousels_section
+/* .carousels_section
 {
     padding-top: 80px;
     margin: -20vw 0 0 0;
-}
+} */
 
 .carousels_section .uk-container {
   max-width: 100%;
@@ -198,6 +304,9 @@ footer
 
 .carousels_section .uk-container .carousels_title {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   text-align: center;
   width: 70%;
   margin: 0 auto;
@@ -210,8 +319,8 @@ footer
   color: #ffffff;
   font-weight: 700;
   text-align: center;
-  font-size: clamp(20px, 4.9vw, 62px);
-  white-space: wrap;
+  font-size: clamp(30px, 6.1vw, 64px);
+  white-space: nowrap;
 }
 
 /* .carousels_section .uk-container .carousels_title h2 > div
@@ -258,7 +367,7 @@ footer
     width: 400%;
     height: 500%;
     /* background-color: #2F2F2F; */
-    background-image: url("/assets/imgs/bg/bg5x2.jpg");
+    background-image: url("./assets/imgs/bg/bg5x2.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -376,7 +485,7 @@ counter-reset: count;
     width: 100%;
     height: 100%;
     background: rgb(46,46,46);
-background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100%);
+background: linear-gradient(181deg, rgb(0 0 0 / 14%) 0%, rgb(0 0 0 / 81%) 100%);
   }
 
   .services_section .two_ele_right_side .radio_slider_wraper {
@@ -385,7 +494,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
     align-items: center;
     justify-content: end;
   }
-
+/* 
   .two_ele_left_side
   {
     
@@ -406,7 +515,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
   .two_ele_sec_type2_left
   {
     transform: translateX(-1200px);
-  }
+  } */
 
 
 
@@ -420,7 +529,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
     margin: 0;
     font-family: "Inter", sans-serif;
     color: #ffffff;
-    font-size: clamp(40px, 2.8vw + 1px, 60px);
+    font-size: clamp(40px, 3.9vw, 60px);
     font-weight: 700;
     text-align: start;
     
@@ -439,7 +548,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
     margin: 0;
     font-family: "Inter", sans-serif;
     color: #ffffff;
-    font-size: clamp(16px, 1vw, 22px);
+    font-size: clamp(16px, 1.45vw, 22px);
     font-weight: 400;
     text-align: start;
     padding: 12px 0 0 0;
@@ -464,6 +573,9 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
     margin: 0 -10px;
     display: flex;
     align-items: flex-end;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transition: .6s cubic-bezier(.28,-0.03,0,.99);
     box-shadow: 41px 0px 11px 0px rgba(0,0,0,0.06),
 26px 0px 10px 0px rgba(0,0,0,0.06),
@@ -476,6 +588,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
   {
     background-image: url('./assets/imgs/srvs_card_photoshot.png');
     z-index: 4;
+    background-position: right;
   }
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container .radio_card[for='rc2']
@@ -547,6 +660,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container input:checked + label
   {
     width: 860px;
+    z-index: 5;
   }
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container input:checked + label .radio_card_description
@@ -695,6 +809,20 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
   font-weight: 600;
   border: 1px solid #589ad8;
   border-radius: 40px;
+  }
+
+
+
+  .price_card:hover .price_card_outer_brder_top img
+  {
+    top: -16px;
+    left: -16px;
+  }
+
+  .price_card:hover .price_card_outer_brder_btm img
+  {
+    bottom: -16px;
+    right: -16px;
   }
 
   .tools_and_equipment_section
@@ -1096,7 +1224,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
 
   .wubtm_card_btm p
   {
-    font-size: clamp(10px, 1.17px, 24px);
+    font-size: clamp(10px, 1.2vw, 24px);
     font-weight: 400;
   }
 
@@ -1110,7 +1238,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
 
   .feeback_left_side
   {
-    width: 66vw;
+    width: 60vw;
   }
 
 
@@ -1204,7 +1332,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
 
   .feedback_right_side
   {
-    width: 18vw;
+    width: 24vw;
   }
 
 
@@ -1237,8 +1365,8 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
     fill: transparent;
     stroke: var(--stroke);
     stroke-linejoin: bevel;
-    stroke-dasharray: 12;
-    animation: idle 4s linear infinite;
+    /* stroke-dasharray: 12; */
+    /* animation: idle 4s linear infinite; */
     transition: stroke 0.2s, fill 0.5s;
   }
 
@@ -1638,15 +1766,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
       margin: 3vh 0 0 -25vw;
     }
 
-    
 
-    .two_ele_left_side,
-    .two_ele_right_side,
-    .two_ele_type2_right_side,
-    .two_ele_sec_type2_left
-    {
-      transform: translateX(0);
-    }
 
     .carousels_section
     {
@@ -1699,14 +1819,25 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
       transform: translateX(-200px);
     } */
 
+    .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container
+    {
+      flex-direction: column;
+      height: 80vh;
+    }
   .services_section .two_ele_left_side, .two_ele_type2_right_side
   {
     width: 100%;
   }
+  .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container .radio_card
+  {
+    width: 90vw;
+    margin: 0 0 20px 0;
+  }
 
   .services_section .two_ele_right_side .radio_slider_wraper .radio_slider_container input:checked + label
   {
-    width: 80%;
+    width: 90vw;
+    height: 60vh;
   }
 
   .two_ele_sec_type2_left
@@ -2011,7 +2142,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
   }
 
   .hero_section .uk-container .hero_left_side {
-    padding: 0 0 60vh 100px;
+    padding: 0 0 52vh 85px;
   }
   
 
@@ -2041,7 +2172,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
   width: 720px;
 }
 
-.two_ele_left_side
+/* .two_ele_left_side
   {
     
     transform: translateX(-280px);
@@ -2061,7 +2192,7 @@ background: linear-gradient(90deg, rgba(46,46,46,0.3) 0%, rgba(63,63,63,0.3) 100
   .two_ele_sec_type2_left
   {
     transform: translateX(-980px);
-  }
+  } */
 
   .contact_us_form_container .contact_from
   {
