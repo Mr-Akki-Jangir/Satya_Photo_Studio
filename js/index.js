@@ -29,6 +29,9 @@ if(win_width <= 797)
     $('#desk_nav').hide()
 }
 
+$('#menu-btn').hide()
+$('#desk_nav').show()
+
 const menuContainer = document.querySelector(".menu-container");
 const menu = document.querySelector("#menu-btn");
 let status = false;
@@ -134,11 +137,22 @@ splitTypes.forEach((char,i) => {
 })
 
 revel_center_element.forEach((el) => {
+  
   el.classList.add('show')
 })
 
 revel_left_elements.forEach((el) => {
-  el.classList.add('show')
+  
+  gsap.fromTo((el), {
+    ease: Power4.easeInOut,
+  opacity: 0,
+  x: -100
+  },
+  {
+    opacity: 1,
+    x: 0
+  }
+  )
 })
 
 revel_right_elements.forEach((el) => {
@@ -204,7 +218,15 @@ $('.contact_form_two').show();
 
 })
 
+$('#one').click(function(){
+  $('#modal-container').removeAttr('class').addClass('one');
+  $('body').addClass('modal-active');
+})
 
+$('#modal-container').click(function(){
+  $(this).addClass('out');
+  $('body').removeClass('modal-active');
+});
 
 
 
