@@ -17,6 +17,13 @@
     
       $('.review_card_rating').find('input').attr("disabled", true);
 
+      let r_card =  $('.uk-slider-items').find('.review_card');
+
+
+      function checkRadioFlash(){
+
+      }
+
 
 let win_width = $(window).width()
 
@@ -218,13 +225,29 @@ $('.contact_form_two').show();
 
 })
 
-$('#one').click(function(){
-  $('#modal-container').removeAttr('class').addClass('one');
+$('#modal-container').find('.review_card_rating').find('input').removeAttr('disabled');
+
+
+$('#modal_contact_btn').click(function(){
+  $('.user_img_with_flashes').hide()
+  $('#modal_name_email').text('Your Email')
+  $('#modal_feedback_msg').text('Your Message')  
+  $('#modal-container').removeAttr('class').addClass('modal_review');
   $('body').addClass('modal-active');
 })
 
-$('#modal-container').click(function(){
-  $(this).addClass('out');
+
+
+$('#modal_review_btn').click(function(){
+  $('.user_img_with_flashes').show()
+  $('#modal_name_email').text('Your Name')
+  $('#modal_feedback_msg').text('Write Your Review') 
+  $('#modal-container').removeAttr('class').addClass('modal_review');
+  $('body').addClass('modal-active');
+})
+
+$('#modal_close').click(function(){
+  $('#modal-container').addClass('out');
   $('body').removeClass('modal-active');
 });
 

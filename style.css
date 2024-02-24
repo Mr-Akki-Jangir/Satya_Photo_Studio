@@ -1082,7 +1082,7 @@ footer {
   flex-wrap: wrap;
   align-items: start;
   justify-content: space-between;
-  padding: 20px 50px 0 50px;
+  padding: 90px 50px 0 50px;
 }
 
 .why_us_section .why_us_left_side {
@@ -1281,7 +1281,8 @@ footer {
   width: 24vw;
 }
 
-.review_card_rating {
+.review_card_rating,
+.modal_body .review_card_rating {
   display: flex;
   flex-direction: row-reverse;
   gap: 0.3rem;
@@ -1292,11 +1293,13 @@ footer {
   --fill: #ffc73a;
 }
 
-.review_card_rating input {
+.review_card_rating input,
+.modal_body .review_card_rating input {
   appearance: unset;
 }
 
-.review_card_rating label {
+.review_card_rating label,
+.modal_body .review_card_rating label {
   cursor: pointer;
 }
 
@@ -1359,11 +1362,13 @@ footer {
   }
 }
 
-.review_card_rating label:hover svg {
+.review_card_rating label:hover svg,
+.modal_body .review_card_rating label:hover svg {
   stroke: var(--fill);
 }
 
-.review_card_rating input:checked ~ label svg {
+.review_card_rating input:checked ~ label svg,
+.modal_body .review_card_rating input:checked ~ label svg {
   transition: 0s;
   animation: idle 4s linear infinite, yippee 0.75s backwards;
   fill: var(--fill);
@@ -1462,48 +1467,174 @@ footer {
   transform: scale(0);
   z-index: 1;
 }
-#modal-container.one {
+#modal-container.modal_review {
   transform: scaleY(0.01) scaleX(0);
   animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#modal-container.one .modal-background .modal {
-  transform: scale(0);
+#modal-container.modal_review .modal-background .modal
+ {
+  transform: scale(1);
   animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#modal-container.one.out {
+#modal-container.modal_review.out
+{
   transform: scale(1);
   animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#modal-container.one.out .modal-background .modal {
+#modal-container.modal_review.out .modal-background .modal
+ {
   animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#modal-container.two {
-  transform: scale(1);
-}
 
-#modal-container .modal-background {
+
+#modal-container .modal-background
+ {
   display: table-cell;
   background: rgba(0, 0, 0, 0.8);
   text-align: center;
   vertical-align: middle;
 }
-#modal-container .modal-background .modal {
-  background: white;
-  padding: 50px;
+#modal-container .modal-background .modal
+{
+  background-image: url('./assets/imgs/bg/bg5x2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 25px;
   display: inline-block;
-  border-radius: 3px;
+  border: 2px solid #589ad8;
+  border-radius: 8px;
   font-weight: 300;
   position: relative;
 }
-#modal-container .modal-background .modal h2 {
-  font-size: 25px;
-  line-height: 25px;
-  margin-bottom: 15px;
+
+.modal_title
+{
+  padding: 0 0 15px 0;
 }
-#modal-container .modal-background .modal p {
-  font-size: 18px;
-  line-height: 22px;
+
+
+.modal_title h2 {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-size: clamp(20px, 1.2vw, 32px);
 }
+
+.modal_body
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.modal_body .user_img
+{
+  width: 15vw;
+  border-radius: 50%;
+}
+
+.modal_body .user_img input
+{
+  border-radius: 50%;
+}
+
+.modal_body .review_card_rating 
+{
+  padding: 8vh 0;
+}
+
+.modal_body .review_card_rating svg
+{
+  width: 2rem;
+  height: 2rem;
+  overflow: visible;
+  fill: transparent;
+  stroke: var(--stroke);
+  stroke-linejoin: bevel;
+  stroke-dasharray: 12;
+  animation: idle 4s linear infinite;
+  transition: stroke 0.2s, fill 0.5s;
+}
+
+.modal_body form label
+{
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-size: clamp(14px, 1.1vw, 26px);
+  font-weight: 600;
+  padding: 0 0 10px 0;
+}
+
+.modal_body form .uk-form-controls .uk-input,
+.modal_body form .uk-form-controls .uk-input:focus,
+.modal_body form textarea,
+.modal_body form textarea:focus
+{
+  background: transparent;
+  border-radius: 6px;
+  color: #589ad8;
+  font-size: clamp(12px, 0.8vw, 22px);
+  font-weight: 400;
+  border: 1px solid #589ad8;
+  outline: none;
+}
+
+.modal_body form .modal_btn_group
+{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.modal_body form .modal_btn_group button
+{
+  width: 100%;
+}
+.modal_body form .modal_btn_group .btn_cancel
+{
+  background-color: #fff;
+  text-transform: none;
+  border-radius: 4px;
+  color: #000;
+  font-weight: 600;
+  transition: ease-in-out 0.2s all;
+}
+
+.modal_body form .modal_btn_group .btn_cancel:hover
+{
+  background-color: rgb(252, 2, 2);
+}
+
+.modal_body form .modal_btn_group .uk-button-primary
+{
+  font-weight: 600;
+  background: #589ad8;
+  text-transform: none;
+  border-radius: 4px;
+}
+
+.modal_body form .close_btn
+{
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  z-index: 9;
+}
+
+.modal_body form .close_btn svg
+{
+  stroke: rgb(243, 18, 18);
+  cursor: pointer;
+}
+
+
+
 #modal-container .modal-background .modal .modal-svg {
   position: absolute;
   top: 0;
@@ -1512,12 +1643,9 @@ footer {
   width: 100%;
   border-radius: 3px;
 }
-#modal-container .modal-background .modal .modal-svg rect {
-  stroke: #fff;
-  stroke-width: 2px;
-  stroke-dasharray: 778;
-  stroke-dashoffset: 778;
-}
+
+
+
 
 @keyframes unfoldIn {
   0% {
@@ -1542,6 +1670,8 @@ footer {
   }
 }
 
+
+
 footer {
   position: relative;
   padding: 20px 50px 50px 50px;
@@ -1550,6 +1680,7 @@ footer {
   align-items: start;
   justify-content: space-between;
   background-color: #000;
+  z-index: 0;
 }
 
 .footer_forground_img {
