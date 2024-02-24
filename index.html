@@ -30,12 +30,12 @@
                 <div uk-navbar>
                     <div class="uk-navbar-right">
                         <ul class="uk-navbar-nav">
-                            <li class="uk-active"><a href="">Home</a></li>
-                            <li><a href="">Our Services</a></li>
-                            <li><a href="">Pricing</a></li>
-                            <li><a href="">Gears</a></li>
-                            <li><a href="">Contact</a></li>
-                            <li><a href="">Why Us</a></li>
+                            <li class="uk-active"><a href="#hero_sec">Home</a></li>
+                            <li><a href="#service_sec">Our Services</a></li>
+                            <li><a href="#pricing_sec">Pricing</a></li>
+                            <li><a href="#gears_sec">Gears</a></li>
+                            <li><a href="#contact_sec">Contact</a></li>
+                            <li><a href="#why_sec">Why Us</a></li>
                         </ul>
                     </div>
 
@@ -78,7 +78,7 @@
     <!-- <a id="menu-btn" class="nav_btn"><i class="nav_icon" data-lucide="menu"></i></a> -->
 
 
-    <section class="hero_section">
+    <section class="hero_section" id="hero_sec">
 
         <div class="uk-container">
             <div class="hero_left_side" id="zomm-out">
@@ -111,7 +111,7 @@
 
     </section>
 
-    <section class="carousels_section">
+    <section class="carousels_section revel_one">
         <div class="uk-container">
             <div class="carousels_title" id="zoom-in">
                 <h2 class="txt_revel" data-bg-color="#535353" data-fg-color="#ffffff">We Treasuring Your Precious<br>
@@ -165,9 +165,9 @@
     </section>
 
 
-    <div class="services_section">
+    <div class="services_section" id="service_sec">
         <div class="uk_container-expand two_ele_section">
-            <div class="two_ele_left_side">
+            <div class="two_ele_left_side revel_left">
                 <div class="sec_title">
                     <h2 class="txt_revel" data-bg-color="#535353" data-fg-color="#fff">Our<br
                             class="title_break">Services</h2>
@@ -183,7 +183,7 @@
                 </div>
             </div>
 
-            <div class="two_ele_right_side lr1200">
+            <div class="two_ele_right_side revel_right">
                 <div class="radio_slider_wraper">
                     <div class="radio_slider_container">
                         <input type="radio" name="slide" id="rc1" checked>
@@ -240,10 +240,10 @@
     </div>
 
 
-    <section class="prices_section">
+    <section class="prices_section" id="pricing_sec">
         <div class="uk_container-expand two_ele_section_type2">
 
-            <div class="two_ele_sec_type2_left lr1200">
+            <div class="two_ele_sec_type2_left revel_left">
                 <div class="price_card_container">
                     <div class="price_card">
 
@@ -365,7 +365,7 @@
                 </div>
             </div>
 
-            <div class="two_ele_type2_right_side">
+            <div class="two_ele_type2_right_side revel_right">
                 <div class="sec_title">
                     <h2>Our<br class="title_break">Prices</h2>
                 </div>
@@ -383,7 +383,7 @@
         </div>
     </section>
 
-    <section class="tools_and_equipment_section">
+    <section class="tools_and_equipment_section revel_one" id="gears_sec">
         <div class="sec_title">
             <h2>Our Tools Equipment</h2>
         </div>
@@ -406,7 +406,7 @@
 
     </section>
 
-    <section class="map_section">
+    <section class="map_section revel_one">
         <div class="sec_title">
             <h2>Visit Our Physical Store</h2>
             <h3>Near Bakra Mod, Jhunjhunu, Rajasthan, 333001</h3>
@@ -422,7 +422,7 @@
     </section>
 
 
-    <section class="contact_us_section">
+    <section class="contact_us_section revel_one" id="contact_sec">
         <div class="sec_title">
             <h2>Contact Us</h2>
         </div>
@@ -468,9 +468,9 @@
     </section>
 
 
-    <section class="why_us_section">
+    <section class="why_us_section" id="why_sec">
 
-        <div class="why_us_left_side">
+        <div class="why_us_left_side revel_left">
             <div class="sec_title">
                 <h2>Why<br class="title_break">Us</h2>
             </div>
@@ -482,7 +482,7 @@
             </div>
         </div>
 
-        <div class="why_us_right_side">
+        <div class="why_us_right_side revel_right">
             <div class="why_us_right_top">
                 <div class="why_us_top_cards_container">
                     <div class="why_us_top_card">
@@ -601,7 +601,7 @@
 
 
     <section class="feedback_section">
-        <div class="feeback_left_side">
+        <div class="feeback_left_side revel_left">
             <div class="review_feedback_slider_container">
                 <div uk-slider="center: true">
 
@@ -638,7 +638,7 @@
 </svg>
                                             </label>
 
-                                            <input type="radio" id="flash-4" name="flash-radio" value="flash-1">
+                                            <input type="radio" id="flash-4" name="flash-radio" value="flash-1" checked>
                                             <label for="flash-4">
                                                 <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.03668 23.4164H8.0365C7.96906 23.4164 7.90215 23.4046 7.83874 23.3817C7.71642 23.3367 7.61268 23.252 7.54408 23.1412C7.47533 23.0301 7.44584 22.8992 7.46033 22.7694L7.4605 22.7679L8.29466 15.0871L8.35483 14.5331H7.79759L1.41675 14.5331L1.416 14.5331C1.31003 14.5333 1.20601 14.5046 1.11512 14.4501C1.02424 14.3956 0.949918 14.3173 0.900141 14.2238C0.850364 14.1302 0.827014 14.0249 0.832598 13.919C0.838181 13.8132 0.872489 13.7109 0.931838 13.6231L0.933233 13.621L9.47937 0.839731C9.47957 0.839438 9.47976 0.839145 9.47996 0.838852C9.55274 0.731574 9.65919 0.651587 9.7825 0.611537L9.62805 0.13599L9.7825 0.611536C9.90559 0.571558 10.0385 0.573654 10.1602 0.617465C10.277 0.661214 10.3767 0.741234 10.4446 0.845805C10.5112 0.948207 10.5439 1.06885 10.5382 1.19069L9.70547 8.91284L9.64577 9.46645H10.2026L16.5834 9.46645L16.5842 9.46645C16.6901 9.46629 16.7942 9.495 16.885 9.5495L17.1422 9.12069L16.8851 9.5495C16.9759 9.604 17.0503 9.68223 17.1 9.77578C17.1498 9.86934 17.1732 9.97468 17.1676 10.0805C17.162 10.1863 17.1277 10.2887 17.0683 10.3764L17.0669 10.3785L8.52084 23.1598C8.52064 23.1601 8.52045 23.1604 8.52026 23.1606C8.46681 23.2394 8.39489 23.3039 8.31077 23.3485C8.22635 23.3933 8.13223 23.4166 8.03668 23.4164Z" stroke="#F1C644"/>
@@ -696,7 +696,7 @@
 </svg>
                                             </label>
 
-                                            <input type="radio" id="flash-5" name="flash-radio" value="flash-5">
+                                            <input type="radio" id="flash-5" name="flash-radio" value="flash-5" checked>
                                             <label for="flash-5">
                                                 <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.03668 23.4164H8.0365C7.96906 23.4164 7.90215 23.4046 7.83874 23.3817C7.71642 23.3367 7.61268 23.252 7.54408 23.1412C7.47533 23.0301 7.44584 22.8992 7.46033 22.7694L7.4605 22.7679L8.29466 15.0871L8.35483 14.5331H7.79759L1.41675 14.5331L1.416 14.5331C1.31003 14.5333 1.20601 14.5046 1.11512 14.4501C1.02424 14.3956 0.949918 14.3173 0.900141 14.2238C0.850364 14.1302 0.827014 14.0249 0.832598 13.919C0.838181 13.8132 0.872489 13.7109 0.931838 13.6231L0.933233 13.621L9.47937 0.839731C9.47957 0.839438 9.47976 0.839145 9.47996 0.838852C9.55274 0.731574 9.65919 0.651587 9.7825 0.611537L9.62805 0.13599L9.7825 0.611536C9.90559 0.571558 10.0385 0.573654 10.1602 0.617465C10.277 0.661214 10.3767 0.741234 10.4446 0.845805C10.5112 0.948207 10.5439 1.06885 10.5382 1.19069L9.70547 8.91284L9.64577 9.46645H10.2026L16.5834 9.46645L16.5842 9.46645C16.6901 9.46629 16.7942 9.495 16.885 9.5495L17.1422 9.12069L16.8851 9.5495C16.9759 9.604 17.0503 9.68223 17.1 9.77578C17.1498 9.86934 17.1732 9.97468 17.1676 10.0805C17.162 10.1863 17.1277 10.2887 17.0683 10.3764L17.0669 10.3785L8.52084 23.1598C8.52064 23.1601 8.52045 23.1604 8.52026 23.1606C8.46681 23.2394 8.39489 23.3039 8.31077 23.3485C8.22635 23.3933 8.13223 23.4166 8.03668 23.4164Z" stroke="#F1C644"/>
@@ -738,7 +738,7 @@
 </svg>
                                             </label>
 
-                                            <input type="radio" id="flash-4" name="flash-radio" value="flash-4">
+                                            <input type="radio" id="flash-4" name="flash-radio" value="flash-4" checked>
                                             <label for="flash-4">
                                                 <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.03668 23.4164H8.0365C7.96906 23.4164 7.90215 23.4046 7.83874 23.3817C7.71642 23.3367 7.61268 23.252 7.54408 23.1412C7.47533 23.0301 7.44584 22.8992 7.46033 22.7694L7.4605 22.7679L8.29466 15.0871L8.35483 14.5331H7.79759L1.41675 14.5331L1.416 14.5331C1.31003 14.5333 1.20601 14.5046 1.11512 14.4501C1.02424 14.3956 0.949918 14.3173 0.900141 14.2238C0.850364 14.1302 0.827014 14.0249 0.832598 13.919C0.838181 13.8132 0.872489 13.7109 0.931838 13.6231L0.933233 13.621L9.47937 0.839731C9.47957 0.839438 9.47976 0.839145 9.47996 0.838852C9.55274 0.731574 9.65919 0.651587 9.7825 0.611537L9.62805 0.13599L9.7825 0.611536C9.90559 0.571558 10.0385 0.573654 10.1602 0.617465C10.277 0.661214 10.3767 0.741234 10.4446 0.845805C10.5112 0.948207 10.5439 1.06885 10.5382 1.19069L9.70547 8.91284L9.64577 9.46645H10.2026L16.5834 9.46645L16.5842 9.46645C16.6901 9.46629 16.7942 9.495 16.885 9.5495L17.1422 9.12069L16.8851 9.5495C16.9759 9.604 17.0503 9.68223 17.1 9.77578C17.1498 9.86934 17.1732 9.97468 17.1676 10.0805C17.162 10.1863 17.1277 10.2887 17.0683 10.3764L17.0669 10.3785L8.52084 23.1598C8.52064 23.1601 8.52045 23.1604 8.52026 23.1606C8.46681 23.2394 8.39489 23.3039 8.31077 23.3485C8.22635 23.3933 8.13223 23.4166 8.03668 23.4164Z" stroke="#F1C644"/>
@@ -787,7 +787,7 @@
 </svg>
                                             </label>
 
-                                            <input type="radio" id="flash-4" name="flash-radio" value="flash-4">
+                                            <input type="radio" id="flash-4" name="flash-radio" value="flash-4" checked>
                                             <label for="flash-4">
                                                 <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.03668 23.4164H8.0365C7.96906 23.4164 7.90215 23.4046 7.83874 23.3817C7.71642 23.3367 7.61268 23.252 7.54408 23.1412C7.47533 23.0301 7.44584 22.8992 7.46033 22.7694L7.4605 22.7679L8.29466 15.0871L8.35483 14.5331H7.79759L1.41675 14.5331L1.416 14.5331C1.31003 14.5333 1.20601 14.5046 1.11512 14.4501C1.02424 14.3956 0.949918 14.3173 0.900141 14.2238C0.850364 14.1302 0.827014 14.0249 0.832598 13.919C0.838181 13.8132 0.872489 13.7109 0.931838 13.6231L0.933233 13.621L9.47937 0.839731C9.47957 0.839438 9.47976 0.839145 9.47996 0.838852C9.55274 0.731574 9.65919 0.651587 9.7825 0.611537L9.62805 0.13599L9.7825 0.611536C9.90559 0.571558 10.0385 0.573654 10.1602 0.617465C10.277 0.661214 10.3767 0.741234 10.4446 0.845805C10.5112 0.948207 10.5439 1.06885 10.5382 1.19069L9.70547 8.91284L9.64577 9.46645H10.2026L16.5834 9.46645L16.5842 9.46645C16.6901 9.46629 16.7942 9.495 16.885 9.5495L17.1422 9.12069L16.8851 9.5495C16.9759 9.604 17.0503 9.68223 17.1 9.77578C17.1498 9.86934 17.1732 9.97468 17.1676 10.0805C17.162 10.1863 17.1277 10.2887 17.0683 10.3764L17.0669 10.3785L8.52084 23.1598C8.52064 23.1601 8.52045 23.1604 8.52026 23.1606C8.46681 23.2394 8.39489 23.3039 8.31077 23.3485C8.22635 23.3933 8.13223 23.4166 8.03668 23.4164Z" stroke="#F1C644"/>
@@ -845,7 +845,7 @@
 </svg>
                                             </label>
 
-                                            <input type="radio" id="flash-5" name="flash-radio" value="flash-5">
+                                            <input type="radio" id="flash-5" name="flash-radio" value="flash-5" checked>
                                             <label for="flash-5">
                                                 <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.03668 23.4164H8.0365C7.96906 23.4164 7.90215 23.4046 7.83874 23.3817C7.71642 23.3367 7.61268 23.252 7.54408 23.1412C7.47533 23.0301 7.44584 22.8992 7.46033 22.7694L7.4605 22.7679L8.29466 15.0871L8.35483 14.5331H7.79759L1.41675 14.5331L1.416 14.5331C1.31003 14.5333 1.20601 14.5046 1.11512 14.4501C1.02424 14.3956 0.949918 14.3173 0.900141 14.2238C0.850364 14.1302 0.827014 14.0249 0.832598 13.919C0.838181 13.8132 0.872489 13.7109 0.931838 13.6231L0.933233 13.621L9.47937 0.839731C9.47957 0.839438 9.47976 0.839145 9.47996 0.838852C9.55274 0.731574 9.65919 0.651587 9.7825 0.611537L9.62805 0.13599L9.7825 0.611536C9.90559 0.571558 10.0385 0.573654 10.1602 0.617465C10.277 0.661214 10.3767 0.741234 10.4446 0.845805C10.5112 0.948207 10.5439 1.06885 10.5382 1.19069L9.70547 8.91284L9.64577 9.46645H10.2026L16.5834 9.46645L16.5842 9.46645C16.6901 9.46629 16.7942 9.495 16.885 9.5495L17.1422 9.12069L16.8851 9.5495C16.9759 9.604 17.0503 9.68223 17.1 9.77578C17.1498 9.86934 17.1732 9.97468 17.1676 10.0805C17.162 10.1863 17.1277 10.2887 17.0683 10.3764L17.0669 10.3785L8.52084 23.1598C8.52064 23.1601 8.52045 23.1604 8.52026 23.1606C8.46681 23.2394 8.39489 23.3039 8.31077 23.3485C8.22635 23.3933 8.13223 23.4166 8.03668 23.4164Z" stroke="#F1C644"/>
@@ -885,7 +885,7 @@
                 </div>
 
                 <div class="rw_right">
-                    <button class="uk-button-default">Write Your Review</button>
+                    <button class="uk-button-default" uk-toggle="target: #review_modal">Write Your Review</button>
                 </div>
             </div>
         </div>
@@ -894,7 +894,7 @@
 
 
 
-        <div class="feedback_right_side">
+        <div class="feedback_right_side revel_right">
             <div class="sec_title">
                 <h2>Reviews &<br class="title_break">
                     Feed-backs</h2>
@@ -910,6 +910,16 @@
             </div>
         </div>
     </section>
+
+    <div id="review_modal" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+        </div>
+    </div>
 
     <footer>
 
@@ -999,6 +1009,7 @@
         </div>
     </footer>
 
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
@@ -1016,7 +1027,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 
-
+  
 
     <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/EasePack.min.js"></script>
@@ -1030,8 +1041,9 @@
 
 
 
-    <script type="text/babel" src="./js/curved_carousel.js"></script>
-    <script src="./js/index.js"></script>
+
+    <script defer type="text/babel" src="./js/curved_carousel.js"></script>
+    <script defer src="./js/index.js"></script>
 
 
 

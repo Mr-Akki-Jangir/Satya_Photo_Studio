@@ -143,6 +143,29 @@ requestAnimationFrame(raf)
 
 requestAnimationFrame(raf)
 
+
+//Revel Animations
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {{
+    console.log(entry);
+    if(entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }else {
+      entry.target.classList.remove('show');
+    }
+  }})
+})
+
+const revel_center_element = document.querySelectorAll('.revel_one');
+const revel_left_elements = document.querySelectorAll('.revel_left');
+const revel_right_elements = document.querySelectorAll('.revel_right');
+
+revel_center_element.forEach((el) => observer.observe(el));
+revel_left_elements.forEach((el) => observer.observe(el));
+revel_right_elements.forEach((el) => observer.observe(el));
+
+
 $('.contact_form_first').show();
 $('.contact_form_two').hide();
 
@@ -159,6 +182,10 @@ $('#contact_info_form').click(function(){
 $('.contact_form_two').show();
 
 })
+
+
+
+
 
 
 
