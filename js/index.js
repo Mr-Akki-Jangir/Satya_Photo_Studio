@@ -34,10 +34,11 @@ if(win_width <= 797)
 {
     $('#menu-btn').show()
     $('#desk_nav').hide()
+}else {
+  $('#menu-btn').hide()
+    $('#desk_nav').show()
 }
 
-$('#menu-btn').hide()
-$('#desk_nav').show()
 
 const menuContainer = document.querySelector(".menu-container");
 const menu = document.querySelector("#menu-btn");
