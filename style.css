@@ -1769,10 +1769,12 @@ footer {
 .footer_form .ff_group label {
   color: #589ad8;
   font-weight: 500;
-  font-size: 0.9vw;
+  font-size: clamp(18px, 0.9vw, 26px);
 }
 
-.footer_form > .ff_group > .uk-input {
+.footer_form > .ff_group > .uk-input,
+.footer_form > .ff_group .uk-textarea 
+{
   margin: 6px 0;
   background: transparent;
   outline: none;
